@@ -47,6 +47,9 @@ module.exports = {
           950: '#291D03',
         },
       },
+      fontFamily: {
+        primary: ['Josefin Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],
