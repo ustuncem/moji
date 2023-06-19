@@ -1,82 +1,32 @@
 ---
 import '../styles/base.css';
+
+import Button from '@components/Button.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+
+import coffee from '@assets/img/coffee.webp';
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+  <div
+    class="fixed inset-0 -z-10 grid grid-cols-1 grid-rows-[3fr_1fr] lg:grid-rows-1 lg:grid-cols-[3fr_1fr]"
+  >
+    <div class="bg-secondary-300"></div>
+    <div class="relative bg-primary-300">
+      <img
+        src={coffee}
+        alt="Coffee Mug filled with a cup of coffee"
+        class="coffee-mug absolute h-full bottom-1/2 left-1/2 rotate-180 -translate-x-1/2 lg:h-auto lg:translate-x-0 lg:left-auto lg:top-1/2 lg:-translate-y-1/2 lg:right-1/2 lg:rotate-90"
+      />
+    </div>
+  </div>
+  <main class="py-8 lg:py-16 flex flex-col items-center lg:block">
+    <h1 class="font-bold mb-8 text-5xl text-center lg:text-8xl lg:w-2/3 lg:text-left">
+      Moji Coffee Shop
+    </h1>
+    <p class="mb-12 text-center text-xl lg:text-2xl lg:text-left">
+      Büyükada'nın en samimi kahve dükkanı.
     </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+    <Button path="/menu">Menümüzü Görüntüleyin</Button>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
