@@ -29,7 +29,9 @@ const {title} = Astro.props;
   <body class="w-screen h-screen">
     <Container containerStyles="flex flex-col">
       <Header />
-      <slot />
+      <main class="py-8 lg:py-16 flex flex-col items-center lg:block">
+        <slot />
+      </main>
       <Footer />
     </Container>
   </body>
