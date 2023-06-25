@@ -1,9 +1,20 @@
 ---
+import {getCollection} from 'astro:content';
 import '../styles/base.css';
 
 import Layout from '../layouts/Layout.astro';
+import MenuAccordion from '@components/MenuAccordion';
+
+const menu = await getCollection('menu');
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Menü">
   <h1 class="font-bold mb-8 text-5xl text-center lg:text-8xl lg:w-2/3 lg:text-left">Menü</h1>
+  <div class="w-full h-full overflow-scroll">
+    {
+      menu.map(item => (
+        <MenuAccordion client:visible heading={item.data.heading} items={item.data.items} />
+      ))
+    }
+  </div>
 </Layout>
