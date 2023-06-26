@@ -15,6 +15,7 @@
 
   .coffee-mug {
     filter: drop-shadow(10px -20px 45px rgba(10, 10, 10, 0.5));
+    width: auto !important;
   }
 
   .cut-layout {

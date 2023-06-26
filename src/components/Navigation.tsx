@@ -13,7 +13,7 @@ function Navigation() {
   return (
     <nav className="w-full flex justify-end z-50">
       <button onClick={toggleNavigation} className="block lg:hidden">
-        <img src={menu} alt="menu" />
+        <img src={menu} alt="menu" width="34" height="20" />
       </button>
       <ul className="text-gray-700 hidden lg:flex lg:justify-end">
         <NavigationLink path="/" placeholder="Ana Sayfa" />
