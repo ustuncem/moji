@@ -4,6 +4,7 @@ const menuCollection = defineCollection({
   type: 'content',
   schema: z.object({
     heading: z.string(),
+    order: z.number(),
     items: z.array(z.object({id: z.number(), title: z.string(), price: z.string()})),
   }),
 });

@@ -48,7 +48,7 @@ function Accordion({heading, items}: Props) {
             >
               <p>{item.title}</p>
               <p className="justify-self-end self-center">{item.price} ₺</p>
-              {items.length - 1 !== idx && <hr className="mt-2 border-primary-700 col-span-2" />}
+              {items.length - 1 !== idx && <hr className="mt-3 border-primary-700 col-span-2" />}
             </div>
           ))}
         </div>
