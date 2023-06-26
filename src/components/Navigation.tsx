@@ -33,7 +33,13 @@ function Navigation() {
           }`}
         >
           <div className="mb-12">
-            <img src={logo} alt="logo" className="w-[180px] lg:w-[260px]" />
+            <img
+              src={logo}
+              alt="logo"
+              className="!w-[180px] lg:!w-[260px]"
+              width="180"
+              height="180"
+            />
           </div>
           <ul className="text-gray-700 absolute top-1/2 -translate-y-1/2">
             <NavigationLink path="/" placeholder="Ana Sayfa" />

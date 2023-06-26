@@ -41,8 +41,17 @@ const {title} = Astro.props;
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
   </head>
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </noscript>
   <body class="w-screen h-screen overflow-hidden">
     <Container containerStyles="flex flex-col">
       <Header />
@@ -52,4 +61,5 @@ const {title} = Astro.props;
       <Footer />
     </Container>
   </body>
+
 </html>
