@@ -41,10 +41,14 @@ function Accordion({heading, items}: Props) {
         style={{height: isOpen ? panelRef.current?.scrollHeight : 0}}
       >
         <div className="py-4">
-          {items.map(item => (
-            <div key={item.id} className="px-4 mb-2 last:mb-0 grid grid-cols-[3fr_2fr] gap-x-4">
-              <p className="text-lg">{item.title}</p>
-              <p className="justify-self-end self-center text-lg">{item.price} ₺</p>
+          {items.map((item, idx) => (
+            <div
+              key={item.id}
+              className="px-4 mb-2 py-1 last:mb-0 grid grid-cols-[3fr_2fr] gap-x-4"
+            >
+              <p>{item.title}</p>
+              <p className="justify-self-end self-center">{item.price} ₺</p>
+              {items.length - 1 !== idx && <hr className="mt-2 border-primary-700 col-span-2" />}
             </div>
           ))}
         </div>
