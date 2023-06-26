@@ -4,11 +4,15 @@
 
 @layer base {
   body {
-    @apply font-primary text-primary-800;
+    @apply font-primary text-primary-800; 
+    height: 100dvh;
   }
+  
+
 }
 
 @layer components {
+  
   .nav-placeholder {
     @apply cursor-pointer block relative after:content-[''] after:relative after:bottom-0 after:block after:h-[2px] after:transition-all after:w-0 after:hover:w-2/3 after:bg-current;
   }
@@ -19,6 +23,6 @@
   }
 
   .cut-layout {
-    @apply h-[calc(100vh-22rem)] lg:h-[calc(100vh-28rem)];
+    @apply h-[calc(100dvh-22rem)] lg:h-[calc(100dvh-28rem)];
   }
 }
