@@ -16,4 +16,8 @@
   .coffee-mug {
     filter: drop-shadow(10px -20px 45px rgba(10, 10, 10, 0.5));
   }
+
+  .cut-layout {
+    @apply h-[calc(100vh-22rem)] lg:h-[calc(100vh-28rem)];
+  }
 }
