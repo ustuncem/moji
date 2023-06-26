@@ -41,8 +41,8 @@ const {title} = Astro.props;
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
     />
   </head>
   <body class="w-screen h-screen overflow-hidden">
