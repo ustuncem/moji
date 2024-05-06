@@ -47,7 +47,7 @@ function Accordion({heading, items}: Props) {
               className="px-4 mb-2 py-1 last:mb-0 grid grid-cols-[3fr_2fr] gap-x-4"
             >
               <p>{item.title}</p>
-              <p className="justify-self-end self-center">{item.price} ₺</p>
+              {/* <p className="justify-self-end self-center">{item.price} ₺</p> */}
               {items.length - 1 !== idx && <hr className="mt-3 border-primary-700 col-span-2" />}
             </div>
           ))}
